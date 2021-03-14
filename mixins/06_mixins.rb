@@ -23,7 +23,7 @@ module Mixins06
   	turn_left
   end
 
-  def put_coloumn_of_5_beepers
+  def put_column_of_5_beepers
   	put_beeper_et_move
 	put_beeper_et_move
 	put_beeper_et_move

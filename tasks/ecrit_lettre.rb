@@ -6,7 +6,7 @@ require_relative "../mixins/06_mixins"
 class EcrivianDeH < UrRobot
 	include Mixins06
 	def ecrit_lettre
-		put_coloumn_of_5_beepers
+		put_column_of_5_beepers
 		turn_around
 		move2_et_turn_left
 		move
@@ -23,7 +23,7 @@ end
 class EcrivianDeE < UrRobot
 	include Mixins06
 	def ecrit_lettre
-		put_coloumn_of_5_beepers
+		put_column_of_5_beepers
 		turn_right
 		move
 		put_beeper_et_move
@@ -46,7 +46,7 @@ end
 class EcrivianDeL < UrRobot
 	include Mixins06
 	def ecrit_lettre
-		put_coloumn_of_5_beepers
+		put_column_of_5_beepers
 		turn_around
 		move
 		move
@@ -60,14 +60,14 @@ end
 class EcrivianDeO < UrRobot
 	include Mixins06
 	def ecrit_lettre
-		put_coloumn_of_5_beepers
+		put_column_of_5_beepers
 		turn_right
 		move
 		put_beeper_et_move
 		put_beeper
 		turn_right
 		move
-		put_coloumn_of_5_beepers
+		put_column_of_5_beepers
 		turn_right
 		move
 		put_beeper_et_move
