@@ -1,4 +1,4 @@
-
+#Change this so it has stategies
 $graphical = true
 require_relative "../karel/ur_robot"
 
