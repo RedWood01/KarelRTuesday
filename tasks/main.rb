@@ -11,6 +11,7 @@ require_relative "../karel/robota"
 def task()
   world = Robota::World
   world.read_world("../worlds/stair_world.txt")
+  #stair_world.txt is were you change to the world file needed
   
   karel = StairSweeper.new(1, 1, Robota::EAST, 0)
   karel.stair_sweeper()
