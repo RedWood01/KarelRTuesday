@@ -1,7 +1,7 @@
 require "byebug"
 arr = []
 	
-100.times do
+9000.times do
 	arr << rand(1..100)
 end
 
@@ -9,24 +9,28 @@ ii = 0
 j = 1
 tmp = 0
 
-puts arr
+#puts arr
 
 puts "------------------------"
 len = arr.length
 
-while ii < len
-	j = 1
-	while j < (len - ii)
-		if arr[j-1] < arr[j]
-			tmp = arr[j]
-			arr[j] = arr[j-1]
-			arr[j-1] = tmp
+debut = Time.now
+while ii < len -1
+	j = ii+1
+	plus_petit = ii
+	while j < (len)
+		if arr[plus_petit] > arr[j]
+			plus_petit = j
 		end
-		j = j +1
+		j = j+1
 	end
+	tmp = arr[ii]
+	arr[ii] = arr[plus_petit]
+	arr[plus_petit] = tmp
+
 	ii = ii+1
 end
-
-puts arr
-puts "---------"
-puts arr.uniq
+fin = Time.now
+diff = fin - debut
+puts diff
+#puts arr

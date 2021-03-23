@@ -9,15 +9,16 @@ ii = 0
 j = 1
 tmp = 0
 
-puts arr
+#puts arr
 
 puts "------------------------"
 len = arr.length
 
+debut = Time.now
 while ii < len
 	j = 1
 	while j < (len - ii)
-		if arr[j-1] < arr[j]
+		if arr[j-1] > arr[j]
 			tmp = arr[j]
 			arr[j] = arr[j-1]
 			arr[j-1] = tmp
@@ -26,7 +27,10 @@ while ii < len
 	end
 	ii = ii+1
 end
+fin = Time.now
+diff = fin - debut
+puts diff
 
-puts arr
-puts "---------"
-puts arr.uniq
+#puts arr
+#puts "---------"
+#puts arr.uniq
