@@ -25,11 +25,16 @@ class Safe < UrRobot
 end
 
 def task()
-	world = Robota::world
-	world.read_world("../wolrds/")
+	world = Robota::World
+	world.read_world("../worlds/mumble.txt")
 
 	karel = Safe.new(1, 2, Robota::NORTH, 0)
-	karel.move
+		10.times do
+			karel.move
+			karel.pick_beeper
+			karel.move
+			karel.put_beeper
+		end
 end
 
 if __FILE__ == $0

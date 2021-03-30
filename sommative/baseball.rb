@@ -29,8 +29,7 @@ class Baseball < UrRobot
 end
 
 def task()
-	world = Robota::world
-	world.read_world("../wolrds/monde")
+	world = Robota::World
 
 	karel = Baseball.new(1, 15, Robota::NORTH, INFINITY)
 	4.times do
@@ -41,7 +40,7 @@ end
 
 if __FILE__ == $0
 	if $graphical
-		screen = window(30, 40)
+		screen = window(30, 100)
 		screen.run do
 			task
 		end
